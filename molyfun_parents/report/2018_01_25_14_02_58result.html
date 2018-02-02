@@ -1,0 +1,1473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>家长版接口测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>家长版接口测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2018-01-25 14:02:58</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:25.872480</p>
+<p class='attribute'><strong>Status:</strong> Pass 13 Failure 34</p>
+
+<p class='description'></p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)' class="btn btn-xs btn-primary">Summary</a>
+<a href='javascript:showCase(1)' class="btn btn-xs btn-danger">Failed</a>
+<a href='javascript:showCase(2)' class="btn btn-xs btn-info">All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td colspan='2'>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+    <td>Screenshot</td>
+</tr>
+
+<tr class='failClass'>
+    <td>Test id</td>
+    <td>a_user_case.user: 用户模块测试</td>
+    <td>47</td>
+    <td>13</td>
+    <td>34</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',47)">Detail</a></td>
+    <td>image</td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_password_01</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_password_02</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_password_03</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_password_04</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_password_06</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_password_08</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_phone_01</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_phone_02</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_phone_03</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_phone_04</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_fault_phone_06</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_pawd_null: 密码为空登录</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_a_login_pawd_null_01: 密码为空登录</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft1.14' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_a_login_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.14')" >
+        fail</a>
+
+    <div id='div_ft1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.14: Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 144, in test_a_login_success
+    self.assertEqual(r.code,200,"test_a_login_success error")
+AssertionError: 300 != 200 : test_a_login_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.15' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_about</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.15')" >
+        fail</a>
+
+    <div id='div_ft1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.15: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 162, in test_user_about
+    self.assertEqual(r.code,200,"test_user_about error")
+AssertionError: 1000 != 200 : test_user_about error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.16' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_captcha</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.16')" >
+        fail</a>
+
+    <div id='div_ft1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.16: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 172, in test_user_captcha
+    self.assertEqual(r.code,200,"test_user_captcha error")
+AssertionError: 300 != 200 : test_user_captcha error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.17' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_info</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.17')" >
+        fail</a>
+
+    <div id='div_ft1.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.17: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 156, in test_user_info
+    self.assertEqual(r.code,200,"test_user_info error")
+AssertionError: 1000 != 200 : test_user_info error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.18' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_01</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.18')" >
+        fail</a>
+
+    <div id='div_ft1.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.18: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 185, in test_user_messageList_fault_01
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.19' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_02</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.19')" >
+        fail</a>
+
+    <div id='div_ft1.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.19: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 192, in test_user_messageList_fault_02
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.20' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_03</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.20')" >
+        fail</a>
+
+    <div id='div_ft1.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.20: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 199, in test_user_messageList_fault_03
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.21' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_06</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.21')" >
+        fail</a>
+
+    <div id='div_ft1.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.21: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 220, in test_user_messageList_fault_06
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.22' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_07</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.22')" >
+        fail</a>
+
+    <div id='div_ft1.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.22: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 227, in test_user_messageList_fault_07
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.23' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_08</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.23')" >
+        fail</a>
+
+    <div id='div_ft1.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.23: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 234, in test_user_messageList_fault_08
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.24' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_09</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.24')" >
+        fail</a>
+
+    <div id='div_ft1.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.24: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 241, in test_user_messageList_fault_09
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.25' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_10</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.25')" >
+        fail</a>
+
+    <div id='div_ft1.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.25: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 248, in test_user_messageList_fault_10
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.26' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_11</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.26')" >
+        fail</a>
+
+    <div id='div_ft1.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.26: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 255, in test_user_messageList_fault_11
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.27' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_12</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.27')" >
+        fail</a>
+
+    <div id='div_ft1.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.27: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 262, in test_user_messageList_fault_12
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.28' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_13</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.28')" >
+        fail</a>
+
+    <div id='div_ft1.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.28: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 269, in test_user_messageList_fault_13
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.29' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_14</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.29')" >
+        fail</a>
+
+    <div id='div_ft1.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.29: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 276, in test_user_messageList_fault_14
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.30' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_15</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.30')" >
+        fail</a>
+
+    <div id='div_ft1.30' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.30').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.30: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 283, in test_user_messageList_fault_15
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.31' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_16</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.31')" >
+        fail</a>
+
+    <div id='div_ft1.31' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.31').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.31: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 290, in test_user_messageList_fault_16
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.32' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_17</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.32')" >
+        fail</a>
+
+    <div id='div_ft1.32' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.32').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.32: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 297, in test_user_messageList_fault_17
+    self.assertEqual(r.code,200,"test_user_messageList_success error")
+AssertionError: 1000 != 200 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.33' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_18</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.33')" >
+        fail</a>
+
+    <div id='div_ft1.33' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.33').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.33: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 304, in test_user_messageList_fault_18
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.34' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_19</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.34')" >
+        fail</a>
+
+    <div id='div_ft1.34' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.34').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.34: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 311, in test_user_messageList_fault_19
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.35' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_20</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.35')" >
+        fail</a>
+
+    <div id='div_ft1.35' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.35').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.35: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 318, in test_user_messageList_fault_20
+    self.assertEqual(r.code,200,"test_user_messageList_success error")
+AssertionError: 1000 != 200 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.36' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_21</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.36')" >
+        fail</a>
+
+    <div id='div_ft1.36' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.36').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.36: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 325, in test_user_messageList_fault_21
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.37' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_22</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.37')" >
+        fail</a>
+
+    <div id='div_ft1.37' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.37').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.37: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 332, in test_user_messageList_fault_22
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.38' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_23</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.38')" >
+        fail</a>
+
+    <div id='div_ft1.38' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.38').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.38: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 339, in test_user_messageList_fault_23
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.39' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_24</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.39')" >
+        fail</a>
+
+    <div id='div_ft1.39' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.39').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.39: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 346, in test_user_messageList_fault_24
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.40' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_25</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.40')" >
+        fail</a>
+
+    <div id='div_ft1.40' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.40').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.40: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 353, in test_user_messageList_fault_25
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.41' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_26</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.41')" >
+        fail</a>
+
+    <div id='div_ft1.41' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.41').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.41: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 360, in test_user_messageList_fault_26
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.42' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_27</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.42')" >
+        fail</a>
+
+    <div id='div_ft1.42' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.42').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.42: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 367, in test_user_messageList_fault_27
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.43' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_28</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.43')" >
+        fail</a>
+
+    <div id='div_ft1.43' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.43').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.43: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 374, in test_user_messageList_fault_28
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.44' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_29</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.44')" >
+        fail</a>
+
+    <div id='div_ft1.44' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.44').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.44: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 381, in test_user_messageList_fault_29
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.45' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_fault_30</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.45')" >
+        fail</a>
+
+    <div id='div_ft1.45' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.45').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.45: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 388, in test_user_messageList_fault_30
+    self.assertEqual(r.code,300,"test_user_messageList_success error")
+AssertionError: 1000 != 300 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.46' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_messageList_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.46')" >
+        fail</a>
+
+    <div id='div_ft1.46' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.46').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.46: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 178, in test_user_messageList_success
+    self.assertEqual(r.code,200,"test_user_messageList_success error")
+AssertionError: 1000 != 200 : test_user_messageList_success error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='ft1.47' class='none'>
+    <td  align='center'>case\a_u</td>
+	<td class='failCase'><div class='testcase'>test_user_updatePassword</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.47')" >
+        fail</a>
+
+    <div id='div_ft1.47' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.47').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.47: token 取值错误,确认是否已经登陆
+Traceback (most recent call last):
+  File "D:\molyfuninterfaceframework1\molyfun_parents\test_case\a_user_case.py", line 394, in test_user_updatePassword
+    self.assertEqual(r.code,200,"test_user_updatePassword error")
+AssertionError: 1000 != 200 : test_user_updatePassword error
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td align='center'>
+        <a href="" title="">
+            <span class="glyphicon glyphicon-camera"></span>
+        </a>
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>47</td>
+    <td class="text text-success">13</td>
+    <td class="text text-danger">34</td>
+    <td class="text text-warning">0</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

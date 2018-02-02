@@ -1,0 +1,206 @@
+{
+
+  "test_enroll_notice_success": {
+    "departcode": "A0001930"
+  },
+
+  "test_enroll_notice_error_01": {
+    "departcode": "a0001930"
+  },
+
+  "test_enroll_notice_error_02": {
+    "departcode": ""
+  },
+
+  "test_enroll_notice_error_03": {
+    "departcode": null
+  },
+
+  "test_enroll_notice_error_04": {
+    "departcode": " A0001930"
+  },
+
+  "test_enroll_notice_error_05": {
+    "departcode": "A0001930 "
+  },
+
+  "test_enroll_notice_error_06": {
+    "departcode": "A0000004"
+  },
+
+  "test_enroll_enrollinglist_success":{
+    "pageNum": "1",
+    "pageSize": "10"
+  },
+
+  "test_enroll_info_success":{
+    "id": "65485ffd761d418e997fce336c6219ca"
+  },
+
+  "test_enroll_info_error_01":{
+    "id": "65485FFD761d418e997fce336c6219ca"
+  },
+
+  "test_enroll_info_error_02":{
+    "id": ""
+  },
+
+  "test_enroll_info_error_03":{
+    "id": null
+  },
+
+  "test_enroll_info_error_04":{
+    "id": " 65485ffd761d418e997fce336c6219ca"
+  },
+
+  "test_enroll_info_error_05":{
+    "id": "65485ffd761d418e997fce336c6219ca "
+  },
+
+  "test_enroll_infosubmit_success":{
+    "address": "陕西省西安市长安区",
+    "phone": "18292883595",
+    "contactlist": [
+        {
+            "cardid": "610124198611040922",
+            "qq": "2311039597",
+            "phone": "18292883595",
+            "education": "小学",
+            "occupation": "测试",
+            "relationship": "母女",
+            "sex": "女",
+            "name": "测试"
+        }
+    ],
+    "departid": "8a2d9263540d4e2f01540d57421b0001",
+    "studentEnrol": {
+        "sex": "女",
+        "countryid": "e548cebc5e287041015e2bccd74f003b",
+        "parity": "3",
+        "name": "田园",
+        "birthdatetime": "2013-01-03",
+        "cardid": ""
+    },
+    "email": "2311039597@qq.com",
+    "evaluatelist": [
+        {
+            "id": "4028b88160a0009e0160a01a72f2016d"
+        },
+        {
+            "id": "4028b88160a0009e0160a01b5cdd0172"
+        },
+        {
+            "id": "4028b88160a0009e0160a01d970d02db"
+        },
+        {
+            "id": "4028b88160a0009e0160a028a0ae0449"
+        }
+    ]
+  },
+
+   "test_enroll_entrancenotice_success":{
+    "enrollstudnetid": "65485ffd761d418e997fce336c6219ca"
+  },
+
+   "test_enroll_infoupdate_success":{
+    "id": "65485ffd761d418e997fce336c6219ca",
+    "sex": "男",
+    "birthdatetime": "2011-12-11",
+    "parity": "2",
+    "cardid": "612501201701011234",
+    "address": "陕西省西安市周至县"
+  },
+
+   "test_enroll_infoupdate_error_01":{
+    "id": "",
+    "sex": "男",
+    "birthdatetime": "2011-12-11",
+    "parity": "2",
+    "cardid": "612501201701011234",
+    "address": "陕西省西安市周至县"
+  },
+
+   "test_enroll_infoupdate_error_02":{
+    "id": "65485ffd761d418e997fce336c6219ca",
+    "sex": "",
+    "birthdatetime": "2011-12-11",
+    "parity": "2",
+    "cardid": "612501201701011234",
+    "address": "陕西省西安市周至县"
+  },
+
+   "test_enroll_infoupdate_error_03":{
+    "id": "65485ffd761d418e997fce336c6219ca",
+    "sex": "男",
+    "birthdatetime": "",
+    "parity": "2",
+    "cardid": "612501201701011234",
+    "address": "陕西省西安市周至县"
+  },
+
+   "test_enroll_infoupdate_error_04":{
+    "id": "65485ffd761d418e997fce336c6219ca",
+    "sex": "男",
+    "birthdatetime": "2011-12-11",
+    "parity": "",
+    "cardid": "612501201701011234",
+    "address": "陕西省西安市周至县"
+  },
+
+   "test_enroll_infoupdate_error_05":{
+    "id": "65485ffd761d418e997fce336c6219ca",
+    "sex": "男",
+    "birthdatetime": "2011-12-11",
+    "parity": "2",
+    "cardid": "",
+    "address": "陕西省西安市周至县"
+  },
+
+   "test_enroll_infoupdate_error_06":{
+    "id": "65485ffd761d418e997fce336c6219ca",
+    "sex": "男",
+    "birthdatetime": "2011-12-11",
+    "parity": "2",
+    "cardid": "612501201701011234",
+    "address": ""
+  },
+
+   "test_enroll_contactupdate_success":{
+    "contactlist": [
+        {
+            "cardid": "610124198611040922",
+            "qq": "1111111111",
+            "phone": "18292883595",
+            "id": "",
+            "education": "初中",
+            "occupation": "在线的",
+            "relationship": "我的",
+            "sex": "女",
+            "name": "Ts李"
+        }
+    ],
+    "studentEnrol": {
+        "id": "00bf4b84846a4144b42aaceb5bf1f8a7"
+    }
+  },
+
+   "test_enroll_abandoncauseadd_success":{
+    "enrollstudnetid": "c6b3d1ee17b544abb85f35db2c42b1cb"
+  },
+
+   "test_enroll_evaluatelist_success":{
+    "departid": "8a2d9263540d4e2f01540d57421b0001"
+  },
+
+   "test_enroll_evaluateresultlist_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "departid": "8a2d9263540d4e2f01540d57421b0001",
+    "enrollstudnetid": "65485ffd761d418e997fce336c6219ca"
+  },
+
+   "test_enroll_judgestatus_success":{
+    "enrollstudnetid": "65485ffd761d418e997fce336c6219ca"
+  }
+
+}

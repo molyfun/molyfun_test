@@ -1,0 +1,34 @@
+{
+
+  "test_depart_votelist_success":{
+    "pageNum": "1",
+    "pageSize": "10"
+  },
+
+  "test_depart_validation_success":{
+    "departname": "%E4%BD%A0%E5%A5%BD",
+    "departmanager": "admin",
+    "province": "%E9%99%95%E8%A5%BF",
+    "city": "%E8%A5%BF%E5%AE%89",
+    "county": "%E4%B8%AD%E5%9B%BD",
+    "departaddress": "%E9%99%95%E8%A5%BF%E7%9C%81%E8%A5%BF%E5%AE%89%E5%B8%82%E9%9B%81%E5%A1%94%E5%8C%BA",
+    "departtel": "12345678911"
+  },
+
+  "test_depart_adddepartcomment_success":{
+    "content": "%E4%BD%A0%E5%A5%BD%E5%AE%B6%E9%95%BF%E7%89%88",
+    "departid": "8a2d9263540d4e2f01540d57421b0001"
+  },
+
+  "test_depart_changedepartfull_success":{
+    "departid": "8a2d9263540d4e2f01540d57421b0001",
+    "studentid": "4a7cbf00b2004e468982e384a01a9db3"
+  },
+
+  "test_depart_list_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "status": "pass"
+  }
+
+}

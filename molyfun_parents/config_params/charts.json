@@ -1,0 +1,10 @@
+{
+
+  "test_charts_list_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "type": "comsive",
+    "chartstype": "week"
+  }
+
+}

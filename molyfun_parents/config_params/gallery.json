@@ -1,0 +1,29 @@
+{
+
+  "test_gallery_attrlist_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "gtype": "1"
+  },
+
+  "test_gallery_list_success":{
+    "content": "行为问题",
+    "pageNum": "1",
+    "pageSize": "10",
+    "typelist": [
+        {
+            "gtype": "1"
+        },
+        {
+            "gtype": "2"
+        },
+        {
+            "gtype": "3"
+        },
+        {
+            "gtype": "4"
+        }
+    ]
+}
+
+}

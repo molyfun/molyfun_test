@@ -1,0 +1,41 @@
+{
+
+  "test_report_list_success":{
+    "pageNum": "1",
+    "pageSize":"10"
+  },
+
+  "test_report_info_success":{
+    "id": "4028b88160f7a9e90160f85ed9d00137"
+  },
+
+  "test_report_feedbackAdd_success":{
+    "reportid": "4028b88160fc88eb0160fe77ebdc004d",
+    "content": "%E5%93%88%E5%93%88%E5%A5%BD%E5%8F%AF%E7%88%B1%E5%91%80%EF%BC%9F%E5%93%88%E5%93%88"
+  },
+
+  "test_report_feedbackUpdate_success":{
+    "id": "b0336bf4a4334fe8a780bb186414b6db",
+    "content": "%E5%93%88%E5%93%88%E5%A5%BD%E5%8F%AF%E7%88%B1%E5%91%80%EF%BC%9F%E5%93%88%E5%93%88"
+  },
+
+  "test_report_feedbacklist_success":{
+    "pageNum": "1",
+    "pageSize":"10",
+    "reportid": "4028b88160fc88eb0160fe77ebdc004d"
+  },
+
+  "test_report_resultAndDate_success":{
+    "reportid": "4028b88160f7a9e90160f85ed9d00137",
+    "courseid": "4028b881609fd90401609ff0bd110d41"
+  },
+
+  "test_report_statistic_success":{
+    "reportid":"4028b88160fc88eb0160fe77ebdc004d"
+  },
+
+  "test_report_targetAndCourseList_success":{
+    "reportid": "4028b88160fc88eb0160fe77ebdc004d"
+  }
+
+}

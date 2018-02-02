@@ -1,0 +1,25 @@
+{
+
+  "test_training_list_success":{
+    "pageNum": "1",
+    "pageSize": "10"
+  },
+
+  "test_training_info_success":{
+    "id": "4028b88160f7a9e90160f85d11680120"
+  },
+
+  "test_training_feedbackList":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "trainingid": "4028b88160f7a9e90160f85d11680120"
+  },
+
+  "test_training_targetinfo_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "trainingid": "4028b88160f7a9e90160f85d11680120",
+    "tempid": "e548cebc5df01b51015df022b6d20019"
+  }
+
+}

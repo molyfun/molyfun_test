@@ -1,0 +1,73 @@
+{
+
+  "test_home_addArticle_success":{
+    "title": "我",
+    "content": "一次就够我笑着说#哈哈哈哈#",
+    "mediaobjectlist": [
+        {
+            "url": "http://test.com/a.jpg",
+            "cover": "http://test.com/a.jpg",
+            "type": "2"
+        },
+        {
+            "url": "http://test.com/b.jpg",
+            "cover": "",
+            "type": "1"
+        }
+    ]
+},
+
+  "test_home_articleList_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "title": "cfgfhjj",
+    "status": "latest"
+  },
+
+  "test_home_topicList_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "name": "xiangaoi"
+  },
+
+  "test_home_commentList_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "articleid": "e7ab294cb4b349d189d231256daf7ba5"
+  },
+
+  "test_home_commentAdd_success":{
+    "content": "%3D%25E6%2588%2591%25E4%25BB%25AC%25E7%259A%2584%25E7%2594%259F%25E6%25B4%25BB%25E6%2596%25B9%25E5%25BC%258F",
+    "articleid": "e7ab294cb4b349d189d231256daf7ba5",
+    "mtype": "4",
+    "timelen": "0"
+  },
+
+  "test_home_articleSuggestionAdd_success":{
+    "content": "%25E5%2597%25AF%25E9%2599%2584%25E5%258A%25A0%25E8%25B4%25B9%250A",
+    "articleid": "e7ab294cb4b349d189d231256daf7ba5"
+  },
+
+  "test_home_info_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "articleid": "886bc3bdc6754a69b27ac8532e82c242"
+  },
+
+  "test_home_likea_success":{
+    "articleid": "490b0388026744228c687251e7b54d17"
+  },
+
+  "test_home_likeCancel_success":{
+    "likeid": "401693e9a23f4965a693906d0dbe2fb9"
+  },
+
+  "test_home_commentRelCancel_success":{
+    "articleid": "4028b88160a144be0160a16992e10061"
+  },
+
+  "test_home_delete_success":{
+    "articleid": "4028b88160a144be0160a16992e10061"
+  }
+
+}

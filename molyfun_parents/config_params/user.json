@@ -1,0 +1,383 @@
+{
+  "test_a_login_pawd_null":{
+    "phone":"18292883595",
+    "password":""
+  },
+
+    "test_a_login_pawd_null_01":{
+    "phone":"18292883595",
+    "password":"null"
+  },
+
+   "test_a_login_error_phone_01":{
+    "phone":" 18292883595",
+    "password":"tsl1314"
+  },
+
+   "test_a_login_error_phone_02":{
+    "phone":"18292883595 ",
+    "password":"tsl1314"
+  },
+
+   "test_a_login_error_phone_03":{
+    "phone":"182928 83595",
+    "password":"tsl1314"
+  },
+
+   "test_a_login_error_phone_04":{
+    "phone":"%18292883595",
+    "password":"tsl1314"
+  },
+
+   "test_a_login_error_phone_05":{
+    "phone":"18292883595%",
+    "password":"tsl1314"
+  },
+
+   "test_a_login_error_phone_06":{
+    "phone":"182928%83595",
+    "password":"tsl1314"
+  },
+
+   "test_a_login_error_password_01":{
+    "phone":"18292883595",
+    "password":" tsl1314"
+  },
+
+   "test_a_login_error_password_02":{
+    "phone":"18292883595",
+    "password":"tsl1314 "
+  },
+
+   "test_a_login_error_password_03":{
+    "phone":"18292883595",
+    "password":"tsl 1314"
+  },
+
+   "test_a_login_error_password_04":{
+    "phone":"18292883595",
+    "password":"%tsl1314"
+  },
+
+   "test_a_login_error_password_05":{
+    "phone":"18292883595",
+    "password":"tsl1314%"
+  },
+
+   "test_a_login_error_password_06":{
+    "phone":"18292883595",
+    "password":"tsl1%314"
+  },
+
+   "test_a_login_error_password_07":{
+    "phone":"18292883595",
+    "password":"TSL314"
+  },
+
+   "test_a_login_error_password_08":{
+    "phone":"18292883595",
+    "password":"Tsl314"
+  },
+
+   "test_a_login_success":{
+     "phone":"18292883595",
+     "password":"tsl1314"
+  },
+
+  "test_user_logout":{
+  },
+
+   "test_a_login_success":{
+     "phone":"18292883595",
+     "password":"tsl1314"
+  },
+
+  "test_user_info":{
+  },
+
+  "test_user_about":{
+  },
+
+  "test_user_captcha_reg":{
+    "phone":"18292883595",
+    "type":"reg"
+  },
+
+  "test_user_captcha_recoverpass":{
+    "phone":"18292883595",
+    "type":"recoverpass"
+  },
+
+  "test_user_captcha_recoverpass_error_01":{
+    "phone":"18292883595",
+    "type":"RECOVERPASS"
+  },
+
+  "test_user_captcha_recoverpass_error_02":{
+    "phone":"18292883595",
+    "type":"Recoverpass"
+  },
+
+  "test_user_captcha_recoverpass_error_03":{
+    "phone":"18292883595",
+    "type":""
+  },
+
+  "test_user_captcha_recoverpass_error_04":{
+    "phone":"18292883595",
+    "type":" "
+  },
+
+  "test_user_captcha_recoverpass_error_05":{
+    "phone":"18292883595",
+    "type":"null"
+  },
+
+  "test_user_captcha_recoverpass_error_06":{
+    "phone":"18292883595",
+    "type":"%"
+  },
+
+  "test_user_captcha_regthirdparty":{
+    "phone":"18292883595",
+    "type":"regthirdparty"
+  },
+
+  "test_user_captcha_change":{
+    "phone":"18292883595",
+    "type":"change"
+  },
+
+  "test_user_messageList_success":{
+    "pageNum":"1",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_01":{
+    "pageNum":"",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_02":{
+    "pageNum":"null",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_03":{
+    "pageNum":"1.0",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_04":{
+    "pageNum":"0",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_05":{
+    "pageNum":"-1",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_06":{
+    "pageNum":"4294967296",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_07":{
+    "pageNum":"-4294967296",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_08":{
+    "pageNum":" ",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_09":{
+    "pageNum":" 1",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_10":{
+    "pageNum":"1 ",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_11":{
+    "pageNum":"%1",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_12":{
+    "pageNum":"1%",
+    "pageSize":"10"
+  },
+
+  "test_user_messageList_error_13":{
+    "pageNum":"1",
+    "pageSize":"10.0"
+  },
+
+  "test_user_messageList_error_14":{
+    "pageNum":"1",
+    "pageSize":""
+  },
+
+  "test_user_messageList_error_15":{
+    "pageNum":"1",
+    "pageSize":"null"
+  },
+
+  "test_user_messageList_error_16":{
+    "pageNum":"1",
+    "pageSize":" "
+  },
+
+  "test_user_messageList_error_17":{
+    "pageNum":"1",
+    "pageSize":"100"
+  },
+
+  "test_user_messageList_error_18":{
+    "pageNum":"1",
+    "pageSize":"4294967296"
+  },
+
+  "test_user_messageList_error_19":{
+    "pageNum":"1",
+    "pageSize":"-4294967296"
+  },
+
+  "test_user_messageList_error_20":{
+    "pageNum":"1",
+    "pageSize":"0"
+  },
+
+  "test_user_messageList_error_21":{
+    "pageNum":"1",
+    "pageSize":" 10"
+  },
+
+  "test_user_messageList_error_22":{
+    "pageNum":"1",
+    "pageSize":"10 "
+  },
+
+  "test_user_messageList_error_23":{
+    "pageNum":"1",
+    "pageSize":"1 0"
+  },
+
+  "test_user_messageList_error_24":{
+    "pageNum":"1",
+    "pageSize":"%10"
+  },
+
+  "test_user_messageList_error_25":{
+    "pageNum":"1",
+    "pageSize":"10%"
+  },
+
+  "test_user_messageList_error_26":{
+    "pageNum":"1",
+    "pageSize":"1%0"
+  },
+
+  "test_user_messageList_error_27":{
+    "pageNum":"",
+    "pageSize":""
+  },
+
+  "test_user_messageList_error_28":{
+    "pageNum":"",
+    "pageSize":null
+  },
+
+  "test_user_messageList_error_29":{
+    "pageNum":null,
+    "pageSize":null
+  },
+
+   "test_user_messageList_error_30":{
+    "pageNum":null,
+    "pageSize":""
+  },
+
+  "test_user_updatePassword":{
+    "oldpassword":"tsl1314",
+    "password":"tsl1314"
+  },
+
+  "test_user_feedbackAdd":{
+    "content":"%E4%B8%80%E8%88%AC"
+  },
+
+  "test_user_feedbackAdd_error_01":{
+    "content":"建议反馈"
+  },
+
+  "test_user_feedbackAdd_error_02":{
+    "content":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+
+  "test_user_feedbackAdd_error_03":{
+    "content":"11111111111111111111111111111111111111111111111111111111111111111111111111"
+  },
+
+  "test_user_feedbackAdd_error_04":{
+    "content":""
+  },
+
+  "test_user_feedbackAdd_error_05":{
+    "content":null
+  },
+
+  "test_user_checkVersion":{
+    "versionnum":"v0.0.0"
+  },
+
+  "test_user_checkVersion_error_01":{
+    "versionnum":""
+  },
+
+  "test_user_checkVersion_error_02":{
+    "versionnum":null
+  },
+
+  "test_user_checkVersion_error_03":{
+    "versionnum":"V0.0.0"
+  },
+
+  "test_user_checkVersion_error_04":{
+    "versionnum":" "
+  },
+
+  "test_user_studentInfo":{
+  },
+
+
+  "test_user_updateStudentInfoFull":{
+    "name": "lisiwa",
+    "sex": "0",
+    "birthdatetime": "2017-03-04",
+    "cardid": "61030219841227151X",
+    "situationdescription": "发音困难，语言表达差"
+  },
+
+  "test_user_updateInfo":{
+    "username": "tsl"
+  },
+
+  "test_user_updateemail_zy":{
+    "email": "2311039597%40qq.com"
+  },
+
+  "test_user_updateemail":{
+    "email": "2311039597@qq.com"
+  },
+
+  "test_user_updateemail_error":{
+    "email": "2311039597@QQ.com"
+  }
+
+}

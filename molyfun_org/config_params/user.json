@@ -1,0 +1,68 @@
+{
+
+  "test_a_login_pawd_null":{
+    "userName":"molyfun",
+    "password":""
+  },
+
+    "test_a_login_success":{
+    "userName":"molyfun",
+    "password":"6"
+  },
+
+  "test_user_add":{
+     "headimgurl": "http://oa91iwip0.bkt.clouddn.com/helloimg/user/20170122/201701221327277dVtNja0.jpg?imageMogr2/thumbnail/300x300",
+        "roleid": "8a2d9263540d4e2f01540d6b30ac0084",
+        "userName": "test",
+        "cardId": "61030219841227151X",
+        "nation": "策略带%",
+        "birthdatetime": "2003-04-13",
+        "politicalStatus": "巴洛克希",
+        "education": "回不来",
+        "regResidence": "了吗发票票数据库管辖区域性质量问题解决",
+        "tel": "22222222222",
+        "mobilePhone": "13309202301",
+        "university": "简单明了吗个体检%跪求胡",
+        "graduationdatetime": "2016-04-13",
+        "major": "八路军人们我",
+        "foreignLevel": "哪里了吗个体会",
+        "computerLevel": "巨魔族长徽记错",
+        "otherSkills": "办法师姐们班牙科目光辉事迹",
+        "position": "肯尼龙王朝气体系里了",
+        "postalAddress": "Leon//颗粒剂型的人来说说这个过程式",
+        "address": "乐乐里了个子宫锁珠帘栊静听着手",
+        "remarks": "擦背不能吧%",
+        "training": "11发个过分寂寞能看看你吗啡那里边上海市场景点击了解情况来看看到了。？？？？%",
+        "resume": "congratulated......  since the five year ,T does action and Ss say words ,we should continued     open-minded  quickly, stop thecc霜狼布质腰带扣除测得到底在哪买保险制度改革开放平台湾人志颖婕妤不得转载请注明出处于莺出门在外打工者的人来说两句子女生命运行榜反应过%",
+        "sex": "1",
+        "memberList": [
+            {
+                "relationship": "发给%",
+                "name": "吃不vb%",
+                "age": "22",
+                "phone": "85285288585",
+                "workUnits": "吃个月才过一会吃过vgv包括咨询洽谈恋人生"
+            }
+        ],
+        "certificateList": [
+            {
+                "url": "http://oa91iwip0.bkt.clouddn.com/mfp/topic/ic_20170123-173923.jpg?imageMogr2/thumbnail/300x300",
+                "name": "证书证书",
+                "type": "1"
+            }
+        ],
+        "experience": "工作经验工作经验",
+        "sample": "案例案例",
+        "post": "职称职称",
+        "skills": "特长"
+  }
+  ,
+
+    "test_user_listbyorg":{
+    "page":"1",
+    "rows":"20"
+  }
+
+
+
+}

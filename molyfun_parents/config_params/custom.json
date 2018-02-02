@@ -1,0 +1,69 @@
+{
+
+  "test_custom_planlist_success":{
+    "pageNum": "1",
+    "pageSize": "10"
+  },
+
+  "test_custom_customplanCreate_success":{
+  },
+
+  "test_custom_docNum_success":{
+    "customplanid": "6ef0fc3beebd4cc59d5cda1b3a5bfb6c"
+  },
+
+  "test_custom_msgAdd_success":{
+    "content": "%E5%93%88%E5%93%88%E5%93%88%E5%93%88",
+    "customplanid": "d3873be5e48f4a53be2c6f188635c12e",
+    "type": "4",
+    "timelen": "0"
+  },
+
+  "test_custom_msgList_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "type": "4",
+    "customplanid": "d3873be5e48f4a53be2c6f188635c12e"
+  },
+
+  "test_custom_eval_success":{
+    "commentid": "%E5%93%88%E5%93%88%E5%93%88%E5%93%88",
+    "customplanid": "d3873be5e48f4a53be2c6f188635c12e",
+    "degree": "1"
+  },
+
+  "test_custom_doclist_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "customplanid": "d3873be5e48f4a53be2c6f188635c12e"
+  },
+
+  "test_custom_docUpdate_success":{
+    "customplanid": "6ef0fc3beebd4cc59d5cda1b3a5bfb6c",
+    "list": [
+        {
+            "projectid": "",
+            "id": "4028b88160a0009e0160a07251710477",
+            "seq": "1",
+            "mediaobjectlist": [],
+            "name": "1.上传对话视频或图片"
+        },
+        {
+            "projectid": "",
+            "id": "4028b88160a0009e0160a0728c050478",
+            "seq": "2",
+            "mediaobjectlist": [],
+            "name": "2.上传吃饭喝水的视频或图片"
+        },
+        {
+            "projectid": "",
+            "id": "4028b88160a0009e0160a072c2550479",
+            "content": "世界顶级飞机飞过",
+            "seq": "3",
+            "name": "3.上传基本生活情况的视频或图片",
+            "mediaobjectlist": []
+        }
+    ]
+}
+
+}

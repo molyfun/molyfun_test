@@ -1,0 +1,20 @@
+{
+
+  "test_impression_list_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "pagetimestamp": "2018-01-3",
+    "around": "after"
+  },
+
+  "test_impression_add_success":{
+    "content": "%E5%93%88%E5%93%88%E5%93%88%E5%93%88",
+    "type": "4",
+    "timelen": "10"
+  },
+
+  "test_impression_delete_success":{
+    "impressionid": "322363dfe4fd4025b95ea4e3e11cf857"
+  }
+
+}

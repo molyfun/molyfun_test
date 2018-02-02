@@ -1,0 +1,22 @@
+{
+
+  "test_mission_dailySign_success":{
+  },
+
+  "test_mission_typeList_success":{
+    "pageNum": "1",
+    "pageSize": "10"
+  },
+
+  "test_mission_refreshCharts_success":{
+    "operid": "9116aa0e3e51404a827a253de622ff1b",
+    "type": "day"
+  },
+
+  "test_mission_list_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "missiontypeid": "402883565c6bc7f2015c6bca45080001"
+  }
+
+}

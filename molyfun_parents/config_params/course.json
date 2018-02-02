@@ -1,0 +1,50 @@
+{
+
+  "test_course_fackback_add":{
+    "coursesummaryid": "4028b88160dda2650160dea0be64002c",
+    "content":"这是反馈内容",
+    "mediaobjectlist": []
+  },
+
+  "test_course_courseDateIdentifyList_success":{
+    "datestr": "2018-01-10"
+  },
+
+  "test_course_courseUserList_success":{
+    "pageNum": "1",
+    "pageSize": "10"
+  },
+
+  "test_course_list_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "plandatetimestr": "2018-01-30"
+  },
+
+  "test_course_feedbackUpdate_success":{
+    "content": "哈哈好可爱哦。测试jjj hv v",
+    "id":"831c56e3c5c34b5c9062dd749129ab7e",
+    "mediaobjectlist": []
+  },
+
+  "test_course_feedbacklist_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "courseid": "4028b88160dda2650160dea0bdfa0029"
+  },
+
+  "test_course_info_success":{
+    "isdownload": "y",
+    "id":"4028b88160dda2650160dea0be64002c",
+    "mediaobjectlist": []
+  },
+
+  "test_course_summary_success":{
+    "plandatetimestr": "2018-01-10"
+  },
+
+  "test_course_courseRelCancel_success":{
+    "relid": "ceb6396b8af646a68927351ebd3a017f"
+  }
+
+}

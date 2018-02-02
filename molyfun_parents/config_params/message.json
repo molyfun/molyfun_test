@@ -1,0 +1,62 @@
+{
+
+  "test_message_batchdel_success":{
+    "idlist": [
+        {
+            "id": "b54734194ebb7a01a23bf5dcd623cf76"
+        },
+        {
+            "id": "5ae2d3e64a7a16ee48514a4f6085eea2"
+        },
+        {
+            "id": "905cdcd89cff4f03a67ad895da11e2a8"
+        },
+        {
+            "id": "905cdcd89cff4f03a67ad895da11e2a8"
+        },
+        {
+            "id": "905cdcd89cff4f03a67ad895da11e2a8"
+        },
+        {
+            "id": "905cdcd89cff4f03a67ad895da11e2a8"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        },
+        {
+            "id": "034748193abd74ed43f149e5919ce0ff"
+        }
+    ]
+}
+
+}

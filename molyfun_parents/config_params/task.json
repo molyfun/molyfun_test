@@ -1,0 +1,20 @@
+{
+
+  "test_task_list_success":{
+    "pageNum": "1",
+    "pageSize":"10",
+    "plandatetimestr": "2018-01-10"
+  },
+
+  "test_task_taskDateIdentifyList_success":{
+    "datestr": "2018-01-10"
+  },
+
+  "test_task_update_success":{
+    "result": "8a2d926354984f3f015516a7eff40213",
+    "id": "4028b88160ba915c0160bacf3bfc0074",
+    "mediaobjectlist": [],
+    "comment": "哈哈哈哈哈哈、"
+}
+
+}

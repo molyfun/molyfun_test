@@ -1,0 +1,13 @@
+{
+
+  "test_iep_queryIepPlanList_success":{
+    "evaluateid": "65485ffd761d418e997fce336c6219ca"
+  },
+
+  "test_iep_queryIepTempList_success":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "ieptempid": "65485ffd761d418e997fce336c6219ca"
+  }
+
+}

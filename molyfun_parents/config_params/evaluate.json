@@ -1,0 +1,22 @@
+{
+
+  "test_evaluate_list_success":{
+    "pageNum": "1",
+    "pageSize": "10"
+  },
+
+  "test_evaluate_analysisResultlist_success":{
+    "evaluateid": "65485ffd761d418e997fce336c6219ca"
+  },
+
+  "test_evaluate_evaluateAnalysislist":{
+    "pageNum": "1",
+    "pageSize": "10",
+    "evaluateid": "65485ffd761d418e997fce336c6219ca"
+  },
+
+  "test_evaluate_evaluteProjectList_success":{
+    "evaluateid": "65485ffd761d418e997fce336c6219ca"
+  }
+
+}
